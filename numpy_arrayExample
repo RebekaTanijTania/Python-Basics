@@ -1,0 +1,46 @@
+from numpy import *
+
+ar1 = array([1,2,3,4,5])
+#shallow copy, value will not chnage
+ar2 = ar1.view()
+print(ar1+ar2)
+ar1[0] = 99
+#print(sin(ar1))
+
+
+#print(sort(ar1))
+
+
+#print(max(ar1))
+print(ar1)
+print(id(ar1))
+print()
+print(ar2)
+print(id(ar2))
+
+
+#### copying array ....deep copy 
+ar2 = ar1.copy()
+ar1[2] = 77
+print(ar1)
+print(id(ar1))
+print()
+print(ar2)
+print(id(ar2))
+
+#%%%multidimentonal array
+arr1 = array(([1,2,3,11],[4,5,6,22],[7,8,9,55]))
+
+print(arr1)
+print(arr1.ndim)
+#convert to one dimention using flaten function
+arr2 = arr1.flatten()
+print(arr2)
+print(arr2.shape)
+print(arr2.reshape(2,2,3))
+print(arr1.size)
+#%%
+###matrix
+m = matrix('1,2,3,11;4,5,6,22;7,8,9,55')
+print(m)
+print(diagonal(m))
